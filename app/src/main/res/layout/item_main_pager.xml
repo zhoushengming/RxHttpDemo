@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/touch_bg"
+    android:paddingBottom="4dp"
+    android:paddingTop="4dp">
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:padding="14dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingEnd="2dp"
+        android:paddingStart="2dp"
+        android:text="username"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/avatar"
+        app:layout_constraintStart_toStartOf="@id/avatar"
+        app:layout_constraintTop_toBottomOf="@id/avatar"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:paddingTop="4dp"
+        android:text="关于外派工作, 求大佬指点"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/avatar"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/context"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:minLines="4"
+        android:paddingBottom="4dp"
+        android:paddingEnd="4dp"
+        android:paddingTop="4dp"
+        android:text="最近公司发生了挺多事情, 在自己没任何准备下显得异常的突然, 也许这就是职场 Feature!
+
+说下正事想请教一下大家, 因为自己没有过任何外出工作经验, 目前在深圳然后是要外派到沈阳工作个 4 - 6 星期左右, 主要工作是 安排和管理另一家公司几位同事一起工作, 也会配合担任部分核心工作完成任务。
+
+但是上级比较忙, 以及具体出差时间还没有明确定下来, 上级主要就问了下是否接受出差, 自己反问了下出差的主要工作, 每天提供相应的餐补和住宿. 还没有详细问具体金额以及其他支持的报销类型等等。 自己也才来公司没有多久, 很多地方都了解的表少, 公司本身制度也不完善。
+
+希望有类似经历的 V 友, 可以指点一下或分享一下经历。 比如这边应该提出那些必须要面对的问题类似的。 或者在外派过程都会遇到的坑, 福利待遇这些都可以聊聊😀"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title"/>
+
+    <TextView
+        android:id="@+id/lastModify"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minWidth="80dp"
+        android:text="3小时前"
+        app:layout_constraintStart_toStartOf="@id/context"
+        app:layout_constraintTop_toBottomOf="@id/context"/>
+
+    <TextView
+        android:id="@+id/replies"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minWidth="80dp"
+        android:text="3回复"
+        app:layout_constraintStart_toEndOf="@id/lastModify"
+        app:layout_constraintTop_toBottomOf="@id/context"/>
+
+    <TextView
+        android:id="@+id/topic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minWidth="90dp"
+        android:text="职场话题"
+        app:layout_constraintStart_toEndOf="@id/replies"
+        app:layout_constraintTop_toBottomOf="@id/context"/>
+
+    <Spinner
+        android:id="@+id/moreBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/context"/>
+
+</android.support.constraint.ConstraintLayout>
